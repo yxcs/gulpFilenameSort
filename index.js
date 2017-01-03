@@ -35,7 +35,7 @@ function gulpFileNameSort(options) {
     var _this = this;
 
     files.sort(function (a, b) {
-      return String.naturalCompare(a.relative.toLowerCase(), b.relative.toLowerCase());
+      return (a.relative.toLowerCase()).localeCompare(b.relative.toLowerCase()); // String.naturalCompare(a.relative.toLowerCase(), b.relative.toLowerCase());
     });
 
     preFiles = preFiles.filter(function(v){return !!v})
